@@ -1,0 +1,13 @@
+﻿@model Productify.TightlyCoupled.Models.Home.HomePageViewModel
+@{
+    ViewBag.Title = "Default";
+}
+
+
+<h2>Products</h2>
+<ul>
+	@foreach (var product in Model.Products)
+	{
+		<li><a href="/Product/@product.Slug/@product.Id">@product.Name</a></li>
+	}
+</ul>
